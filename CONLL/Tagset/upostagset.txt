@@ -1,0 +1,15 @@
+ADV
+P+D
+D
+A
+N
+P
+V
+PRO
+PONCT
+CL
+C
+PREF
+ET
+P+PRO
+I

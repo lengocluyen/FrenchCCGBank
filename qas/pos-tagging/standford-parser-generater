@@ -1,0 +1,27 @@
+import os
+from SemanticExtraction.src.directory import Directory
+from SemanticExtraction.src.docConverter import DocumentConverter
+from SemanticExtraction.src.commandLinux import CommandExecute
+
+commande=CommandExecute()
+def execute(filename):
+
+    variableCommand = "cd /home/lengocluyen/standford-parser/stanford-corenlp-full-2018-01-31/ && java -Xmx5g -cp \"*\" edu.stanford.nlp.pipeline.StanfordCoreNLP -props StanfordCoreNLP-french.properties -annotators tokenize,ssplit,pos,lemma,ner,depparse -file %s -outputFormat conllu" % filename
+
+    print variableCommand
+
+    result=commande.exucute(variableCommand)
+    print (result)
+
+
+#dataset="/home/lengocluyen/PyWorkspace/PyCharmProjects/qas/data/question/" # can take this from argv
+dataset="/home/lengocluyen/PyWorkspace/PyCharmProjects/qas/data/" # can take this from argv
+dirTxt=os.path.join(dataset, "bescherelle/")
+
+#dirTxt=os.path.join(home,"txt/")
+directoryTxt = Directory()
+listTxt = directoryTxt.scan_dir(dirTxt)
+
+
+for name in listTxt:
+    execute(name)

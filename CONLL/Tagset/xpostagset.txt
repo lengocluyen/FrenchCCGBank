@@ -1,0 +1,58 @@
+ADV	27409	Tout plus ne pas longuement là même aujourd' hui ne guère ne pas là encore donc Récemment enfin plus alors 
+
+P+D	19480	au du du du du du des du au des des aux des des au du des du du du 
+
+DET	92679	des l' Un une la le le ses sa cette la les la leur les l' Une la l' l' 
+
+ADJ	45242	petites pareille même toute politique vraies net tout même dernière ravi libre clientéliste mollétiste deux grosses prêt tous Nouvelle socialiste 
+
+NC	138769	choses intégration texte proximité soirée jour MM tête tête premier second compliments sympathie fois base proches MM ministre défense militaristes 
+
+P	86888	à sur Dans en à d' après de de de de par à de à à de pendant de Entre 
+
+VINF	13522	changer refuser Avoir avoir entendre brouiller laisser partir rejoindre refaire faire arrêter prendre accorder être opérer articuler donner concilier qualifier 
+
+PROREL	6512	qui qui qui qui qui où qui qui que qui qui qui que qui où où qui qu' où qu' 
+
+V	35495	marque peut retrouvaient renouvelait assurait est ronchonnaient frappait prédisposait tranchait emportait discutaient cachait tentait ont peut remarquait a fait risquait 
+
+PONCT	67202	, , - - , , , - - " " " " - : " " , ... , 
+
+PRO	4583	ça celui chacun soi celles Nous 150 tous cela un une ce rien lui rien lui cela ce un celle 
+
+CLR	4283	se se se se se se s' s' s' se s' se s' se se s' se s' se se 
+
+NPP	25391	Dray Chevènement Max Gallo Georges Sarre maurassiens Chevènement Dray Poperen Lienemann Essonne Poperen Poperen Dray Roland Castro SFIO Nord Bouches 
+
+CC	13915	et et et Mais et et et et Et et Mais et et et ou Et et Et Mais et 
+
+CLO	3218	lui l' l' la y en nous nous ce en lui le en ce le en y nous lui l' 
+
+CLS	8826	c' il on on ce c' l'on il il il C' on on On C' il -t-il -t-il elle ce 
+
+VPP	18271	été traités arrivé rallié réfléchi insisté décidé rappelée organisée traités réquisitionné installée né mort Devenu construites apportées détruite remplacée fait 
+
+CS	6272	que que que que que Si que que qu' que que qu' que que que Si qu' que que comme 
+
+VPR	2511	exprimant présentant étant provenant dénonçant utilisant augmentant jaillissant étant arguant ayant grandissant contredisant Moyennant permettant résultant ayant défendant ajoutant étant 
+
+PREF	465	mi- mi- vice- auto franco- pro anti- bi- vice- co- quasi- post- non- non- non- ex- quasi- hyper- ex- ex- 
+
+VS	770	accompagne vienne soit soit soient sombre aient ait confient évitent soit soit puisse applique soit agisse soit soit aient permette 
+
+DETWH	47	quelles Quelles Quelle quel quel quel Quelle Quelle Quelle Quelle quelle quelle quelle quelles Quelle quelle quelles quels quelles quelles 
+
+ADVWH	219	Comment Comment Quand Comment Où Pourquoi comment Quand comment pourquoi pourquoi Combien Quand comment Pourquoi combien Comment pourquoi où Comment 
+
+	Royal Academy of Arts Burlington House Banqueting House Queens house Covent garden New York Atlantic Wilmans and associates World World
+
+ADJWH	44	quel Quelle Quel quels Quel quel quel quel quel quel quels quelle quel quel quel Quel quel quelle Quelle Quelle 
+
+PROWH	165	lesquels Que Qui que quoi Qu' Quoi quoi Qui quoi lesquelles lesquels qui Quoi Qui qui qu' que qui qui 
+
+	Auquel auquel auquel auxquelles auxquelles qui auquel duquel desquels auxquels auxquels desquelles auquel auquel auxquelles auquel auxquels desquelles desquelles auquel
+
+VIMP	130	Prenez Revenez Regardez Arrête Allongez faites craignez rendez Ajoutez évitez Proposez retenons Écoutons rappelons rendez rendez faites Prenons organisons imaginez 
+
+I	66	Ah Bravo non Bonjour oui bonjour hélas diable Hélas hélas non Bref Oui Oui Oui Ouf Non eh oui Bref 
+
