@@ -108,9 +108,13 @@ path_conll = "CONLL/test/"
 
 path_conll = "CONLL/question/"
 
-path_conll = "CONLL/test/"
 
 path_conll = "CONLL/data/"
+
+path_conll = "CONLL/test/"
+
+path_conll = "CONLL/data/data2/data28"
+
 dtreeList = readConllFile2(path_conll)
 
 #for dtree in dtreeList:
@@ -202,12 +206,12 @@ def ExecuteOne(dtree):
 
 
 def ExucuteAll():
-    if os._exists("compare.txt"):
-        os.remove("compare.txt")
-    if os._exists("compare_finish.txt"):
-        os.remove("compare_finish.txt")
-    if os._exists("compare_unfinish.txt"):
-        os.remove("compare_unfinish.txt")
+    if os._exists("compare2.txt"):
+        os.remove("compare2.txt")
+    if os._exists("compare_finish2.txt"):
+        os.remove("compare_finish2.txt")
+    if os._exists("compare_unfinish2.txt"):
+        os.remove("compare_unfinish2.txt")
 
     i=0
     for dtree in range(0,len(dtreeList)):
@@ -223,11 +227,11 @@ def ExucuteAll():
         # print ("tree: "+ dtree.dTreeChunkRecursiveInText(dtree.chunkingDtreeRercusion()))
         sentenceConlls = dtreeList[dtree]
         ccgMask = CCGMask()
-        ccgMask.ccgTask222(sentenceConlls, filename=str(i) + "btree", folder="/home/lengocluyen/Pictures/testF"+str(i))
+        ccgMask.ccgTask222(sentenceConlls, filename=str(i) + "btree", folder="/home/lengocluyen/Pictures/NTest"+str(i))
 
         #ccgMask.ccgTask_Unfinish(sentenceConlls, filename=str(i) + "btree", folder="/home/lengocluyen/Pictures/ATest")
         i += 1
 
-#ExecuteOne(dtreeList[310])
+#ExecuteOne(dtreeList[113])
 ExucuteAll()
 

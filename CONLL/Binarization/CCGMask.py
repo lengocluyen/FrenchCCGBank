@@ -133,7 +133,7 @@ class CCGMask:
 
         self.generateCCGTagForNodeTopDown(btree.root)
 
-        self.traversalFilterTree(btree)
+        self.traversalFilterTree(btree, sentenceConlls)
 
         #self.generateCCGTagForNodeBottomUp(btree.root)
 
@@ -229,7 +229,7 @@ class CCGMask:
         self.generateCCGTagForNodeBottomUp(btree.root)
         self.traversalFilterTree(btree,sentenceConlls)
 
-        print(sentenceConlls.dTreeChunkRecursiveInText(dtreeChunk))
+        #print(sentenceConlls.dTreeChunkRecursiveInText(dtreeChunk))
         #s = sentenceConlls.sentence.to_normal_sentence()
         #print(s)
         countLeafBtree = btree.countLeaf(btree.root)
@@ -238,7 +238,8 @@ class CCGMask:
 
         if countMissed == 0:
             if countLeafBtree == countNodeDtree:
-                s = "finish"
+                s = "Positive finish " + str(countLeafBtree) + " B-D " + str(
+                    countNodeDtree) + ": " + sentenceConlls.sentence.to_normal_sentence()
                 '''if folder is None:
                     btree.drawTree(filename, directory=None, format="png")
                     sentenceConlls.drawTreeInGraphics(filename + "dtree", "")
@@ -247,14 +248,15 @@ class CCGMask:
                     sentenceConlls.drawTreeInGraphics(filename + "dtree", "/home/lengocluyen/Pictures/T2")
 '''
             else:
-                s = "finish " + str(countLeafBtree) + " B-D " + str(
+                s = "Negative finish " + str(countLeafBtree) + " B-D " + str(
                     countNodeDtree) + ": " + sentenceConlls.sentence.to_normal_sentence()
-            file = open("scompare_finish.txt", "a")
+            file = open("scompare_finish28.txt", "a")
             file.write(s + "\n")
             file.close()
         else:
             if countLeafBtree == countNodeDtree:
-                 s = "Unfinish"
+                 s = "Positive Unfinish " + str(countLeafBtree) + " B-D " + str(
+                    countNodeDtree) + ": " + sentenceConlls.sentence.to_normal_sentence()
                  #s= "Btree Unfinish: " + str(j) + " phrases"
                  '''if folder is None:
                     btree.drawTree(filename, directory=None, format="png")
@@ -265,17 +267,17 @@ class CCGMask:
 '''
                 # print(btree)
             else:
-                s = "Unfinish " + str(countLeafBtree) + " B-D " + str(
+                s = "Negative Unfinish " + str(countLeafBtree) + " B-D " + str(
                     countNodeDtree) + ": " + sentenceConlls.sentence.to_normal_sentence()
-            file = open("scompare_unfinish.txt", "a")
+            file = open("scompare_unfinish28.txt", "a")
             file.write(s + "\n")
             file.close()
 
-        file = open("scompare.txt", "a")
+        file = open("scompare28.txt", "a")
         file.write(s + "\n")
         file.close()
 
-        self.saveSentenceAndCCG(btree,"ccgresult.txt")
+        self.saveSentenceAndCCG(btree,"ccgresult28.txt")
 
         print("All finish")
 
@@ -286,12 +288,18 @@ class CCGMask:
         categoryTree = CategoryTree()
         for word in wordsNodeList:
             if len(word.nodeInfo.ccgTag)>0:
-                sentence += word.nodeInfo.element.form + "\t" + categoryTree.traversalRNLinText(word.nodeInfo.ccgTag[0].root)+"\n"
+                sentence += str(word.nodeInfo.element.id) + "\t" + word.nodeInfo.element.form + "\t" +word.nodeInfo.element.lemma + "\t" \
+                            + self.isEmptyInStr(word.nodeInfo.element.upostag)  + "\t" + self.isEmptyInStr(word.nodeInfo.element.xpostag) + "\t" \
+                            + self.isEmptyInStr(str(word.nodeInfo.element.head))+ "\t"+ self.isEmptyInStr(str(word.nodeInfo.element.deprel))  + "\t"+ self.isEmptyInStr(word.nodeInfo.element.deps)  + "\t" \
+                            + self.isEmptyInStr(categoryTree.traversalRNLinText(word.nodeInfo.ccgTag[0].root))+"\n"
         sentence +="\n"
         file = open(filename, "a")
         file.write(sentence + "\n")
         file.close()
-
+    def isEmptyInStr(self, s):
+        if s is None:
+            s="-"
+        return s
     def ccgTask_Unfinish(self,sentenceConlls,filename=None,folder=None):
         dtreeChunk = sentenceConlls.chunkingDtreeRercusion()
         mappingTree = MappingComponentTree()
@@ -983,7 +991,7 @@ class CCGMask:
     def generateCCGTagForNodeTopDown(self, currentNode):
 
         #root.nodeInfo.label = "Sentence"
-        currentNode.nodeInfo.ccgTag.append(self.catTreeSingleNode("S"))
+        #currentNode.nodeInfo.ccgTag.append(self.catTreeSingleNode("S"))
         if currentNode.hasLeftChild():
             self._ccgTagTopDown(currentNode.leftChild)
         if currentNode.hasRightChild():

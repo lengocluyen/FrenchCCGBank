@@ -1469,7 +1469,8 @@ class UnparseableInputException(Exception):
 
 if __name__ == '__main__':
     os.environ["CANDC"] = "/home/lengocluyen/candc/learningbyreading-master/ext/candc/"
-    text = "the new map has arrived. I'm waiting for his activation."
+    #text = "the new map has arrived. I'm waiting for his activation."
+    text = "John loves Mary."
 
     #opts = OptionParser("usage: %prog TEXT [options]")
     #opts.add_option("--verbose", "-v", help="display verbose logs", action="store_true", default=False, dest="verbose")
