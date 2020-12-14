@@ -1,5 +1,5 @@
 import re
-from CONLL import ElementConll
+from CONLL.ElementConll import *
 import codecs
 from itertools import groupby
 import graphviz

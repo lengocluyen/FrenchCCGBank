@@ -1,7 +1,7 @@
 import os,re
 import sys,os
-from CONLL.CoNLLXHandle import CoNLLXHandle
-from CONLL.FormatError import FormatError
+from CoNLLXHandle import CoNLLXHandle
+from FormatError import FormatError
 
 homepath = "/home/lengocluyen/PyWorkspace/FrenchCCGBank/CONLL/data"
 savepath = "/home/lengocluyen/PyWorkspace/FrenchCCGBank/CONLL/Tagset"

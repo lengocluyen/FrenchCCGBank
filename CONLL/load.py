@@ -1,6 +1,6 @@
 import sys,os
-from CONLL.CoNLLXHandle import CoNLLXHandle
-from CONLL.FormatError import FormatError
+from CoNLLXHandle import CoNLLXHandle
+from FormatError import FormatError
 def corpus_info(inputdir):
     conllx = CoNLLXHandle()
     i=0
@@ -64,7 +64,7 @@ def createTree(path, output,format="pdf"):
 
 #conll_dir = "/home/lengocluyen/corpus/sequoia-corpus-v6.0/conll"
 #conll_dir_tree_output= "/home/lengocluyen/corpus/sequoia-corpus-v6.0/treeoutput/"
-conll_dir = "/home/lengocluyen/corpus/frenchTreebank/t"
-conll_dir_tree_output= "/home/lengocluyen/corpus/frenchTreebank/output/"
+conll_dir = "./ftb_corpus_test/"
+conll_dir_tree_output= "./output_test/"
 #corpus_info(conll_dir)
 createTree(conll_dir,conll_dir_tree_output)
