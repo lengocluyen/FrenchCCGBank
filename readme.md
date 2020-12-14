@@ -1,6 +1,6 @@
 # FRENCH CCGBANK CORPUS
 
-These codes are implemented to generate a french corpus based on the combinatory cateorial grammar and the French Treebank corpus.
+These codes are implemented to generate a combinatory categorial grammar french corpus based on the French Treebank corpus.
 
 ## Corpus
 We used the French Tree Bank corpus under CONLL format with their Postag and dependency tree information. - [Links](http://ftb.linguist.univ-paris-diderot.fr/)
@@ -32,5 +32,4 @@ ID  | Form  | Lemma | Xpostag  | Upostag  |  | Dep  | Head  | CCG tag
 13	 | humains  |	humain  |	A  |	ADJ |	12 |	dep.coord |	12  |	NP\NP
 14	 | .	 |. |	PONCT |	PONCT |	5 |	ponct |	5 |	ponct
 
-## Output
 
